@@ -45,7 +45,7 @@ var updateGoogleSheet = function(){
           })
   document.querySelector("input[list='birds']").value = "";
   document.querySelector("input[id='bcount']").value = "1";
-  document.getElementById('successMessage').innerHTML = birdCount + " " + birdName + " added to your log! Happy birding!"
+  document.getElementById('successMessage').innerHTML = birdCount + " " + birdName.toLowerCase() + " added to your log! happy birding!"
 ;
   
   
@@ -77,7 +77,7 @@ input {
 
 
 <form>
-  <h2 for="bname">Bird name:</h2><br>
+  <h2 for="bname">bird name:</h2><br>
   <input list="birds" name="birds" autocomplete = "off" placeholder="select a bird">
            <datalist id = "birds" name = "birds">
               <option value = "Acadian Flycatcher">Acadian Flycatcher</option>
@@ -563,10 +563,10 @@ input {
               <option value = "Yellow-throated Warbler">Yellow-throated Warbler</option>
               <option value = "Zino's Petrel">Zino's Petrel</option>
          </datalist><br>
-  <h2 for="bcount">Bird Count:</h2><br>
+  <h2 for="bcount">bird count:</h2><br>
   <input type="text" id="bcount" name="bcount" value="1" onfocus=clearBox()>
   <h2 id="successMessage"></h2>
-  <button onClick= updateGoogleSheet() type="button">Submit Bird Count!</button><br>
+  <button onClick= updateGoogleSheet() type="button">submit bird count!</button><br>
   
 </form>
 <body>

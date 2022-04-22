@@ -5,6 +5,10 @@
   <h1>birds with friends</h1>
 </div>
 <script> 
+  
+var clearBox = function(){
+    this.value="";  
+  }
 var updateGoogleSheet = function(){
           var SHEET_ID = '16tY-_-V0LHV9R3iUXD4G-KAsJkRgqGhx83Q3CEveQgs';
           var ACCESS_TOKEN = 'ya29.A0ARrdaM-BghppPfMebxhnjjJuaVn0sTaynI3ITurQc8mNS15JKOxLg3VFkOhZwLkRDaZgLQzr2bTt85oS_po1QXmK-JUH8R6UqS20tA139CJ6njadgzkyrR-sGjGlExpSbXwxlY49KHRCMhj90tNWp-H0c0FD';
@@ -52,7 +56,7 @@ var updateGoogleSheet = function(){
 body {background-color: powderblue;}
 button   {color: purple;
           height: 150px;
-          width: 50%;
+          width: 85%;
           margin-top: 100px;
           margin-bottom: 100px;
           margin-right: 150px;
@@ -560,7 +564,7 @@ input {
               <option value = "Zino's Petrel">Zino's Petrel</option>
          </datalist><br>
   <h2 for="bcount">Bird Count:</h2><br>
-  <input type="text" id="bcount" name="bcount" value="1">
+  <input type="text" id="bcount" name="bcount" value="1" onfocus=clearBox()>
   
   <button onClick= updateGoogleSheet() type="button">Submit Bird Count!</button><br>
   <h2 id="successMessage"></h2>

@@ -1,5 +1,5 @@
 var SHEET_ID = '16tY-_-V0LHV9R3iUXD4G-KAsJkRgqGhx83Q3CEveQgs';
-var ACCESS_TOKEN = 'ya29.A0ARrdaM8BnSUWEpMAIiIShCcyU5OOHYLsjSHBsj0q5tLX2M0v0ES5mu5t3hiVTs-2iP1e9Zgx4BQxmZrSM0uIvrySLav785FEWCfySMida-hO-W-MY4rCZIe2MCtm5pUGil1xE-YN2ZdkAU9OkW8kcIQKuGXC
+var ACCESS_TOKEN = 'ya29.A0ARrdaM8BnSUWEpMAIiIShCcyU5OOHYLsjSHBsj0q5tLX2M0v0ES5mu5t3hiVTs-2iP1e9Zgx4BQxmZrSM0uIvrySLav785FEWCfySMida-hO-W-MY4rCZIe2MCtm5pUGil1xE-YN2ZdkAU9OkW8kcIQKuGXC'
 var birdName = document.querySelector("input[list='birds']").value;
 var birdCount = document.querySelector("input[id='bcount']").value;
 

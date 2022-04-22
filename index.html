@@ -7,7 +7,7 @@
     var birdCount = document.querySelector("input[id='bcount']").value;
 
 
-var updateSheetValues = () => {
+var updateSheetValues = function() {
     console.log("updating bird count");
     fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}:batchUpdate`, {
       method: "POST",

@@ -8,29 +8,30 @@ var updateSheetValues = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        //update this token with yours. 
+        //update this token with yours.
         Authorization: `Bearer ${ACCESS_TOKEN}`,
       },
       body: JSON.stringify({
 
-        requests: [{
-          repeatCell: {
-            range: {
-              startColumnIndex: 0,
-              endColumnIndex: 1,
-              startRowIndex: 0,
-              endRowIndex: 1,
-              sheetId: 0
-            },
-            cell: {
-              userEnteredValue: {
-                "numberValue": 10
-              },
-            },
-            fields: "*"
+ "requests": [
+    {
+      "repeatCell": {
+        "range": {
+          "startColumnIndex": 0,
+          "endColumnIndex": 1,
+          "startRowIndex": 0,
+          "endRowIndex": 1,
+          "sheetId": 0
+        },
+        "cell": {
+          "userEnteredValue": {
+            "numberValue": 60
           }
-        }]
-
-      })
-    })
-  }
+        },
+        "fields": "*"
+      }
+    }
+  ]
+})
+})
+}

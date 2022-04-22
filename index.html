@@ -1,42 +1,41 @@
 <!doctype html>
 <title>birds with friends</title>
 <script> 
-var SHEET_ID = '16tY-_-V0LHV9R3iUXD4G-KAsJkRgqGhx83Q3CEveQgs';
-var ACCESS_TOKEN = 'ya29.A0ARrdaM_u_xuoMlShjKmbPptVtygxcbBV0o33ZykkHo8Kkw8uGnT9CCCx2EsMAlg4Wwng3ActW8IYt4aUk72xDgRGCMf4W6lDRjj6gs3hViF8WXGFI57Z1WZ1jWKCCosE4z2pxtheaIrsJWcoi4ZF0ktWEPW9';
-var birdName = document.querySelector("input[list='birds']").value;
-var birdCount = document.querySelector("input[id='bcount']").value;
-var data = {
-             
-              "majorDimension": "ROWS",
-              "range": "A:B",
-              "values": [
-                [
-                  "red robin",
-                  9
-                ]
-              ]
-                
-        
-    }
+var updateGoogleSheet = function(){
+          var SHEET_ID = '16tY-_-V0LHV9R3iUXD4G-KAsJkRgqGhx83Q3CEveQgs';
+          var ACCESS_TOKEN = 'ya29.A0ARrdaM_u_xuoMlShjKmbPptVtygxcbBV0o33ZykkHo8Kkw8uGnT9CCCx2EsMAlg4Wwng3ActW8IYt4aUk72xDgRGCMf4W6lDRjj6gs3hViF8WXGFI57Z1WZ1jWKCCosE4z2pxtheaIrsJWcoi4ZF0ktWEPW9';
+          var birdName = document.querySelector("input[list='birds']").value;
+          var birdCount = document.querySelector("input[id='bcount']").value;
+          var data = {
 
-fetch('https://content-sheets.googleapis.com/v4/spreadsheets/16tY-_-V0LHV9R3iUXD4G-KAsJkRgqGhx83Q3CEveQgs/values/A:B:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Authorization': `Bearer ${ACCESS_TOKEN}`
-  },
-  body: JSON.stringify({
+                        "majorDimension": "ROWS",
+                        "range": "A:B",
+                        "values": [
+                          [
+                            "red robin",
+                            9
+                          ]
+                        ]
+              }
 
-            "range":'A:B',
-            "majorDimension": 'ROWS',
-            "values": [
-                [birdName,birdCount]
-            ]
-      
-    })  
-    
-})
+          fetch('https://content-sheets.googleapis.com/v4/spreadsheets/16tY-_-V0LHV9R3iUXD4G-KAsJkRgqGhx83Q3CEveQgs/values/A:B:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${ACCESS_TOKEN}`
+            },
+            body: JSON.stringify({
 
+                      "range":'A:B',
+                      "majorDimension": 'ROWS',
+                      "values": [
+                          [birdName,birdCount]
+                      ]
+
+              })  
+
+          })
+}
 </script>
 
 

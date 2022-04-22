@@ -39,6 +39,11 @@ var updateGoogleSheet = function(){
               })  
 
           })
+  document.querySelector("input[list='birds']").value = "";
+  document.querySelector("input[list='bcount']").value = "";
+  document.getElementById('successMessage').innerHTML = birdCount + birdName + "s added to your log!";
+  
+  
 }
 </script>
 
@@ -556,7 +561,8 @@ input {
   <h2 for="bcount">Bird Count:</h2><br>
   <input type="text" id="bcount" name="bcount">
   
-  <button onClick= updateGoogleSheet() type="button">Submit Bird Count!</button>
+  <button onClick= updateGoogleSheet() type="button">Submit Bird Count!</button><br>
+  <h2 id="successMessage"></h2>
   
 </form>
 <body>
